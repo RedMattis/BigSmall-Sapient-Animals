@@ -1,0 +1,29 @@
+<ModMetaData>
+	<name>Big and Small - Sapient Animals</name>
+	<author>RedMattis</author>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<modIconPath IgnoreIfNoMatchingField="True">BS_ModIcon</modIconPath>
+  <packageId>RedMattis.SapientAnimals</packageId>
+	<modDependencies>
+    <li>
+        <packageId>RedMattis.BetterPrerequisites</packageId>
+        <displayName>Big and Small - Framework</displayName>
+        <steamWorkshopUrl>steam://url/CommunityFilePage/2925432336</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Ideology</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>brrainz.harmony</li>
+		<li>RedMattis.BetterPrerequisites</li>
+    <li>erdelf.HumanoidAlienRaces</li>
+    <li>RedMattis.BigSmall.Core</li>
+	</loadAfter>
+  <incompatibleWith>
+	</incompatibleWith>
+	<description>Sapient Animals!</description>
+</ModMetaData>

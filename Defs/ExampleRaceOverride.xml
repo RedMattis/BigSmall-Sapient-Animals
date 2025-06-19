@@ -1,0 +1,107 @@
+<Defs>
+
+  <HediffDef ParentName="BS_DefaultRaceTracker">
+    <!--
+    Name must follow this pattern to be recognized by the mod:
+    "HL_NameOfRace_RaceHediff"
+    -->
+    <defName>HL_Rat_RaceHediff</defName> 
+
+    <description>legends speak of rats with astounding culinary skill</description>
+    <label>extraordinary rat</label>
+    <defaultLabelColor>(0.5, 1, 1)</defaultLabelColor>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <traitIcon>Things/Pawn/Animal/Rat/Rat_east</traitIcon>
+        <animalFineManipulation>1</animalFineManipulation>
+        <aptitudes>
+          <Cooking>5</Cooking>
+          <Crafting>4</Crafting>
+        </aptitudes>
+      </li>
+    </modExtensions>
+    <comps>
+      <li Class="BigAndSmall.CompProperties_Race">
+        <canSwapAwayFrom>false</canSwapAwayFrom>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="BS_DefaultRaceTracker">
+    <defName>HL_Thrumbo_RaceHediff</defName> 
+    <description>Some say there are Thrumbo wiser and older than the mountains. At least one of those is true. Usually.</description>
+    <label>thrumbo</label>
+    <defaultLabelColor>(0.5, 1, 1)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <PsychicSensitivity>0.5</PsychicSensitivity>
+          <MeditationFocusGain>0.15</MeditationFocusGain>
+        </statOffsets>
+      </li>
+    </stages>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <traitIcon>Things/Pawn/Animal/Thrumbo/Thrumbo_east</traitIcon>
+        <animalFineManipulation>0.6</animalFineManipulation> <!--Must be magic...-->
+        <aptitudes>
+          <Intellectual>9</Intellectual>
+        </aptitudes>
+      </li>
+    </modExtensions>
+    <comps> <li Class="BigAndSmall.CompProperties_Race"> <canSwapAwayFrom>false</canSwapAwayFrom> </li> </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="BS_DefaultRaceTracker">
+    <defName>HL_Elephant_RaceHediff</defName> 
+    <description>Well known for their agile long trunk, big impressive tusks, the big ears, and big, well, big everything.</description>
+    <label>elephant</label>
+    <defaultLabelColor>(0.5, 1, 1)</defaultLabelColor>
+    <stages>
+      <li>
+        <statFactors>
+          <MaxFlightTime MayRequire="Ludeon.Rimworld.Odyssey">1.5</MaxFlightTime>
+        </statFactors>
+      </li>
+    </stages>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <traitIcon>Things/Pawn/Animal/Thrumbo/Thrumbo_east</traitIcon>
+        <animalFineManipulation>1</animalFineManipulation>
+      </li>
+    </modExtensions>
+    <comps> <li Class="BigAndSmall.CompProperties_Race"> <canSwapAwayFrom>false</canSwapAwayFrom> </li> </comps>
+  </HediffDef>
+  
+  <HediffDef ParentName="BS_DefaultRaceTracker">
+    <defName>HL_Fox_RaceHediff</defName> 
+    <description>What does the fox say? An awful lot apparently.</description>
+    <label>fox</label>
+    <defaultLabelColor>(0.5, 1, 1)</defaultLabelColor>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <traitIcon>Things/Pawn/Animal/Fox/Fox_east</traitIcon>
+        <animalFineManipulation>0.35</animalFineManipulation>
+        <aptitudes>
+          <Social>4</Social>
+        </aptitudes>
+      </li>
+    </modExtensions>
+    <comps> <li Class="BigAndSmall.CompProperties_Race"> <canSwapAwayFrom>false</canSwapAwayFrom> </li> </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="BS_DefaultRaceTracker">
+    <defName>HL_Squirrel_RaceHediff</defName> 
+    <description>Sometimes some crimes go slipping through the cra-\n\n...is that the Mouse approaching?\n\nWaitwaitwaitwaaait!\n\nThese are squirrels not chipmunks! This is fair use!! Have mercy!\n\nI can't afford to pay 900K gold in legal fees!!</description>
+    <label>ordinary squirrel</label>
+    <defaultLabelColor>(0.5, 1, 1)</defaultLabelColor>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <traitIcon>Things/Pawn/Animal/Squirrel/Squirrel_east</traitIcon>
+        <animalFineManipulation>1</animalFineManipulation>
+      </li>
+    </modExtensions>
+    <comps> <li Class="BigAndSmall.CompProperties_Race"> <canSwapAwayFrom>false</canSwapAwayFrom> </li> </comps>
+  </HediffDef>
+
+</Defs>

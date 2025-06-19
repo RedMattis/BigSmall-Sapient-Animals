@@ -1,0 +1,77 @@
+<Defs>
+  <ResearchProjectDef>
+    <defName>BS_SapientAnimalsResearch</defName>
+    <label>sapient animal research</label>
+    <description>Research into making animals sapient.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>MedicineProduction</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>1</researchViewX>
+    <researchViewY>2</researchViewY>
+    <tab>big_and_small</tab>
+  </ResearchProjectDef>
+
+  <ThingDef Name="BS_SapientAnimal_SerumBase" ParentName="MechSerumBase" Abstract="True">
+    <graphicData> <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <stackLimit>10</stackLimit>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <WorkToMake>2000</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <tradeability>Sellable</tradeability>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>BS_UseOnTarget</useJob>
+        <useLabel>Use {0_label}</useLabel>
+        <useDuration>600</useDuration>
+        <warmupMote>Mote_ResurrectAbility</warmupMote>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BS_SapientAnimal_SerumBase">
+    <defName>BS_Sapienator</defName>
+    <label>Cogni-Fi</label>
+    <description>A weird trinket able to make animals sapient.</description>
+    <graphicData> <texPath>BS_Items/sapienator</texPath> </graphicData>
+    <recipeMaker>
+      <researchPrerequisite>BS_SapientAnimalsResearch</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>6</Neutroamine>
+      <MedicineUltratech>5</MedicineUltratech>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="BigAndSmall.CompProperties_TargetableExtended">
+        <targetInfo>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetHumans>false</canTargetHumans>
+          <canTargetMechs>false</canTargetMechs>
+        </targetInfo>
+      </li>
+      <li Class="BigAndSmall.CompProperties_SwapThingDef"> <sapientVersion>true</sapientVersion> </li>
+    </comps>
+  </ThingDef>
+
+</Defs>
