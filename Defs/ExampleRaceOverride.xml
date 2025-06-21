@@ -1,13 +1,37 @@
 <Defs>
+  <HediffDef Abstract="true" Name="BS_DefaultHumanlikeAnimal" ParentName="BS_DefaultRaceTracker">
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <apparelRestrictions>
+        <noArmor>true</noArmor>
+        <thingDefs>
+          <allowlist><li>Apparel_ShieldBelt</li></allowlist>
+        </thingDefs>
+        <apparelLayers>
+          <blacklist>
+            <li>Shell</li>
+            <li>Overhead</li>
+          </blacklist>
+        </apparelLayers>
+        <bodyPartGroups>
+          <blacklist>
+            <li>FullHead</li>
+          </blacklist>
+        </bodyPartGroups>
+      </apparelRestrictions>
+      </li>
+    </modExtensions>
+    <comps> <li Class="BigAndSmall.CompProperties_Race"> <canSwapAwayFrom>false</canSwapAwayFrom> </li> </comps>
+  </HediffDef>
 
-  <HediffDef ParentName="BS_DefaultRaceTracker">
+  <HediffDef ParentName="BS_DefaultHumanlikeAnimal">
     <!--
     Name must follow this pattern to be recognized by the mod:
     "HL_NameOfRace_RaceHediff"
     -->
     <defName>HL_Rat_RaceHediff</defName> 
 
-    <description>legends speak of rats with astounding culinary skill</description>
+    <description>Legends speak of rats with astounding culinary skill</description>
     <label>extraordinary rat</label>
     <defaultLabelColor>(0.5, 1, 1)</defaultLabelColor>
     <modExtensions>
@@ -20,14 +44,9 @@
         </aptitudes>
       </li>
     </modExtensions>
-    <comps>
-      <li Class="BigAndSmall.CompProperties_Race">
-        <canSwapAwayFrom>false</canSwapAwayFrom>
-      </li>
-    </comps>
   </HediffDef>
 
-  <HediffDef ParentName="BS_DefaultRaceTracker">
+  <HediffDef ParentName="BS_DefaultHumanlikeAnimal">
     <defName>HL_Thrumbo_RaceHediff</defName> 
     <description>Some say there are Thrumbo wiser and older than the mountains. At least one of those is true. Usually.</description>
     <label>thrumbo</label>
@@ -49,10 +68,9 @@
         </aptitudes>
       </li>
     </modExtensions>
-    <comps> <li Class="BigAndSmall.CompProperties_Race"> <canSwapAwayFrom>false</canSwapAwayFrom> </li> </comps>
   </HediffDef>
 
-  <HediffDef ParentName="BS_DefaultRaceTracker">
+  <HediffDef ParentName="BS_DefaultHumanlikeAnimal">
     <defName>HL_Elephant_RaceHediff</defName> 
     <description>Well known for their agile long trunk, big impressive tusks, the big ears, and big, well, big everything.</description>
     <label>elephant</label>
@@ -70,10 +88,9 @@
         <animalFineManipulation>1</animalFineManipulation>
       </li>
     </modExtensions>
-    <comps> <li Class="BigAndSmall.CompProperties_Race"> <canSwapAwayFrom>false</canSwapAwayFrom> </li> </comps>
   </HediffDef>
   
-  <HediffDef ParentName="BS_DefaultRaceTracker">
+  <HediffDef ParentName="BS_DefaultHumanlikeAnimal">
     <defName>HL_Fox_RaceHediff</defName> 
     <description>What does the fox say? An awful lot apparently.</description>
     <label>fox</label>
@@ -83,14 +100,40 @@
         <traitIcon>Things/Pawn/Animal/Fox/Fox_east</traitIcon>
         <animalFineManipulation>0.35</animalFineManipulation>
         <aptitudes>
+          <Melee>4</Melee>
+          <Shooting>-20</Shooting>
+          <Construction>-8</Construction>
+          <Mining>-8</Mining>
+          <Cooking>-2</Cooking>
+          <Plants>-2</Plants>
+          <Animals>-20</Animals>
+          <Crafting>-8</Crafting>
+          <Artistic>-2</Artistic>
+          <Medicine>-8</Medicine>
+          <Social>4</Social>
+          <Intellectual>2</Intellectual>
+        </aptitudes>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="BS_DefaultHumanlikeAnimal">
+    <defName>HL_Cobra_RaceHediff</defName> 
+    <description>am scary cober\nI do a flat\n\nHISS\n\ndon't heck with me</description>
+    <label>scary cobra</label>
+    <defaultLabelColor>(0.5, 1, 1)</defaultLabelColor>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <traitIcon>Things/Pawn/Animal/Cobra/Cobra_east</traitIcon>
+        <animalFineManipulation>0.75</animalFineManipulation>
+        <aptitudes>
           <Social>4</Social>
         </aptitudes>
       </li>
     </modExtensions>
-    <comps> <li Class="BigAndSmall.CompProperties_Race"> <canSwapAwayFrom>false</canSwapAwayFrom> </li> </comps>
   </HediffDef>
 
-  <HediffDef ParentName="BS_DefaultRaceTracker">
+  <HediffDef ParentName="BS_DefaultHumanlikeAnimal">
     <defName>HL_Squirrel_RaceHediff</defName> 
     <description>Sometimes some crimes go slipping through the cra-\n\n...is that the Mouse approaching?\n\nWaitwaitwaitwaaait!\n\nThese are squirrels not chipmunks! This is fair use!! Have mercy!\n\nI can't afford to pay 900K gold in legal fees!!</description>
     <label>ordinary squirrel</label>
@@ -101,7 +144,6 @@
         <animalFineManipulation>1</animalFineManipulation>
       </li>
     </modExtensions>
-    <comps> <li Class="BigAndSmall.CompProperties_Race"> <canSwapAwayFrom>false</canSwapAwayFrom> </li> </comps>
   </HediffDef>
 
 </Defs>
