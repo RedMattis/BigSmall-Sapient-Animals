@@ -134,6 +134,26 @@
   </HediffDef>
 
   <HediffDef ParentName="BS_DefaultHumanlikeAnimal">
+    <defName>HL_Alligator_RaceHediff</defName> 
+    <description>Edu-gators are legendary aliens from the dark planet earth. They are locked in an eternal dinosaur space laser battle against SHARKS!!\n\n- Empire research paper filled out with crayons.</description>
+    <label>edu-gator</label>
+    <defaultLabelColor>(0.5, 1, 0.5)</defaultLabelColor>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <traitIcon>Things/Pawn/Animal/Rat/Rat_east</traitIcon>
+        <animalFineManipulation>1</animalFineManipulation>
+        <aptitudes>
+          <Shooting>3</Shooting>
+          <Intellectual>5</Intellectual>
+        </aptitudes>
+        <forcedTraits>
+          <li>Transhumanist</li>
+        </forcedTraits>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="BS_DefaultHumanlikeAnimal">
     <defName>HL_Squirrel_RaceHediff</defName> 
     <description>Sometimes some crimes go slipping through the cra-\n\n...is that the Mouse approaching?\n\nWaitwaitwaitwaaait!\n\nThese are squirrels not chipmunks! This is fair use!! Have mercy!\n\nI can't afford to pay 900K gold in legal fees!!</description>
     <label>ordinary squirrel</label>
