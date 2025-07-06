@@ -48,14 +48,18 @@
 
   <HediffDef ParentName="BS_DefaultHumanlikeAnimal">
     <defName>HL_Thrumbo_RaceHediff</defName> 
-    <description>Some say there are Thrumbo wiser and older than the mountains. At least one of those is true. Usually.</description>
+    <description>Some say there are Thrumbo wiser and older than the mountains. At least one of those is usually true.</description>
     <label>thrumbo</label>
     <defaultLabelColor>(0.5, 1, 1)</defaultLabelColor>
     <stages>
       <li>
+        <statFactors>
+          <PsychicEntropyRecoveryRate>0.8</PsychicEntropyRecoveryRate>
+        </statFactors>
         <statOffsets>
           <PsychicSensitivity>0.5</PsychicSensitivity>
-          <MeditationFocusGain>0.15</MeditationFocusGain>
+          <MeditationFocusGain>0.2</MeditationFocusGain>
+          <MentalBreakThreshold>0.1</MentalBreakThreshold>
         </statOffsets>
       </li>
     </stages>
@@ -63,6 +67,35 @@
       <li Class="BigAndSmall.PawnExtension">
         <traitIcon>Things/Pawn/Animal/Thrumbo/Thrumbo_east</traitIcon>
         <animalFineManipulation>0.6</animalFineManipulation> <!--Must be magic...-->
+        <aptitudes>
+          <Intellectual>7</Intellectual>
+        </aptitudes>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="BS_DefaultHumanlikeAnimal" MayRequire="Ludeon.Rimworld.Odyssey">
+    <defName>HL_AlphaThrumbo_RaceHediff</defName> 
+    <description>Some say there are Thrumbo wiser and older than the mountains and alpha thrumbo are said to be able to recall the memories of all their ancestors when they meditate.</description>
+    <label>alpha thrumbo</label>
+    <defaultLabelColor>(0.5, 1, 1)</defaultLabelColor>
+    <stages>
+      <li>
+        <statFactors>
+          <GlobalLearningFactor>1.5</GlobalLearningFactor>
+          <PsychicEntropyRecoveryRate>1.5</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <statOffsets>
+          <PsychicSensitivity>0.5</PsychicSensitivity>
+          <MeditationFocusGain>0.05</MeditationFocusGain>
+          <MentalBreakThreshold>-0.2</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <traitIcon>Things/Pawn/Animal/Thrumbo/Thrumbo_east</traitIcon>
+        <animalFineManipulation>0.65</animalFineManipulation> <!--Must be magic...-->
         <aptitudes>
           <Intellectual>9</Intellectual>
         </aptitudes>
@@ -122,6 +155,16 @@
     <description>am scary cober\nI do a flat\n\nHISS\n\ndon't heck with me</description>
     <label>scary cobra</label>
     <defaultLabelColor>(0.5, 1, 1)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeDodgeChance>1</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.25</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
     <modExtensions>
       <li Class="BigAndSmall.PawnExtension">
         <traitIcon>Things/Pawn/Animal/Cobra/Cobra_east</traitIcon>
@@ -135,8 +178,8 @@
 
   <HediffDef ParentName="BS_DefaultHumanlikeAnimal">
     <defName>HL_Alligator_RaceHediff</defName> 
-    <description>Edu-gators are legendary aliens from the dark planet earth. They are locked in an eternal dinosaur space laser battle against SHARKS!!\n\n- Empire research paper filled out with crayons.</description>
-    <label>edu-gator</label>
+    <description>Edu-gators are legendary aliens from the dark planet Earth. They are locked in an eternal dinosaur space laser battle against SHARKS!!\n\n- Empire research paper filled out with crayons.</description>
+    <label>Alligator from Earth</label>
     <defaultLabelColor>(0.5, 1, 0.5)</defaultLabelColor>
     <modExtensions>
       <li Class="BigAndSmall.PawnExtension">
@@ -149,6 +192,10 @@
         <forcedTraits>
           <li>Transhumanist</li>
         </forcedTraits>
+        <!-- Means the trait will be removed along with the hediff. -->
+        <traitsDependentOnRace>
+          <li>Transhumanist</li>
+        </traitsDependentOnRace>
       </li>
     </modExtensions>
   </HediffDef>
