@@ -2,15 +2,16 @@
   <ResearchProjectDef>
     <defName>BS_SapientAnimalsResearch</defName>
     <label>sapient animal research</label>
-    <description>Research into making animals sapient.</description>
+    <description>Research into making animals fully sapient. For better or worse.</description>
     <baseCost>1500</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
       <li>MedicineProduction</li>
+      <li MayRequire="RedMattis.SentientAnimals">BS_SentientAnimalsResearch</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-    <researchViewX>1</researchViewX>
-    <researchViewY>2</researchViewY>
+    <researchViewX>2</researchViewX>
+    <researchViewY>0</researchViewY>
     <tab>big_and_small</tab>
   </ResearchProjectDef>
 
