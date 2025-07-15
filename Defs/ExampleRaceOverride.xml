@@ -3,22 +3,23 @@
     <modExtensions>
       <li Class="BigAndSmall.PawnExtension">
         <apparelRestrictions>
-        <noArmor>true</noArmor>
-        <thingDefs>
-          <allowlist><li>Apparel_ShieldBelt</li></allowlist>
-        </thingDefs>
-        <apparelLayers>
-          <blacklist>
-            <li>Shell</li>
-            <li>Overhead</li>
-          </blacklist>
-        </apparelLayers>
-        <bodyPartGroups>
-          <blacklist>
-            <li>FullHead</li>
-          </blacklist>
-        </bodyPartGroups>
-      </apparelRestrictions>
+          <noArmor>true</noArmor>
+          <thingDefs>
+            <allowlist><li>Apparel_ShieldBelt</li></allowlist>
+          </thingDefs>
+          <apparelLayers>
+            <blacklist>
+              <li>Shell</li>
+              <li>Overhead</li>
+            </blacklist>
+          </apparelLayers>
+          <bodyPartGroups>
+            <blacklist>
+              <li>FullHead</li>
+            </blacklist>
+          </bodyPartGroups>
+        </apparelRestrictions>
+        <disableFacialAnimations>true</disableFacialAnimations>
       </li>
     </modExtensions>
     <comps> <li Class="BigAndSmall.CompProperties_Race"> <canSwapAwayFrom>false</canSwapAwayFrom> </li> </comps>
