@@ -4,9 +4,9 @@
       <li Class="BigAndSmall.PawnExtension">
         <apparelRestrictions>
           <noArmor>true</noArmor>
-          <thingDefs>
-            <allowlist><li>Apparel_ShieldBelt</li></allowlist>
-          </thingDefs>
+          <tags>
+            <allowlist><li>BeltDefense</li></allowlist>
+          </tags>
           <apparelLayers>
             <blacklist>
               <li>Shell</li>
