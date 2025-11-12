@@ -159,7 +159,7 @@
     <stages>
       <li>
         <statOffsets>
-          <MeleeDodgeChance>1</MeleeDodgeChance>
+          <MeleeDodgeChance>5</MeleeDodgeChance>
         </statOffsets>
         <statFactors>
           <MeleeDamageFactor>1.25</MeleeDamageFactor>
