@@ -5,7 +5,11 @@
         <apparelRestrictions>
           <noArmor>true</noArmor>
           <tags>
-            <allowlist><li>BeltDefense</li></allowlist>
+            <allowlist>
+              <li>BeltDefense</li>
+              <li>Nudist</li>
+              <li>BS_RoyalAndIdeologyHats</li>
+						</allowlist>
           </tags>
           <apparelLayers>
             <blacklist>
