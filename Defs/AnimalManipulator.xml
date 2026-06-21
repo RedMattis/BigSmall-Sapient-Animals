@@ -1,0 +1,74 @@
+<Defs>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>BS_MobilityImplant</defName>
+    <label>archotech mobility-refiner</label>
+    <description>An installed archotech mobility-refiner. Integrates with the subject to improve fine-mobility manipulation, joint-flexibility and coordination a great degree.\n\nThe effect is especially noticeable when observed on creatures normally incapable of fine manipulation abilities; letting their bodies twist and contort to wield tools in ways you'd otherwise assume implausible.</description>
+    <descriptionHyperlinks><ThingDef>BS_MobilityImplant_Thing</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>BS_MobilityImplant_Thing</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <statOffsets>
+          <SM_AttackSpeed>0.1</SM_AttackSpeed>
+          <MeleeHitChance>1.1</MeleeHitChance>
+          <MeleeDodgeChance>5</MeleeDodgeChance>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <animalFineManipulationOffset>1.0</animalFineManipulationOffset>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartArchotechBase">
+    <defName>BS_MobilityImplant_Thing</defName>
+    <label>archotech mobility-refiner</label>
+    <description>An archotech mobility-refiner. Integrates with the subject to improve fine-mobility manipulation, joint-flexibility and coordination a great degree.\n\nThe effect is especially noticeable when observed on creatures normally incapable of fine manipulation abilities; letting their bodies twist and contort to wield tools in ways you'd otherwise assume implausible.</description>
+    <descriptionHyperlinks><RecipeDef>BS_MobilityImplant_Recipe</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardCore</li></thingSetMakerTags>
+    <statBases>
+      <MarketValue>2400</MarketValue>
+      <Mass>7</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>BS_MobilityImplant_Recipe</defName>
+    <label>install archotech mobility-refiner</label>
+    <description>Install a archotech mobility-refiner.</description>
+    <descriptionHyperlinks>
+      <ThingDef>BS_MobilityImplant_Thing</ThingDef>
+      <HediffDef>BS_MobilityImplant</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing archotech mobility-refiner.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BS_MobilityImplant_Thing</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>BS_MobilityImplant_Thing</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+			<li>Torso</li>
+      <li>Body</li>
+		</appliedOnFixedBodyParts>
+    <addsHediff>BS_MobilityImplant</addsHediff>
+  </RecipeDef>
+
+</Defs>
